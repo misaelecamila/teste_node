@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-//require('dotenv').config()
+require('dotenv').config()
 //const port = process.env.PORT ||3000
-const port = 3000
+//const port = 3000
 
 app.set('view engine','ejs');
 app.set('views',__dirname+'/views');
@@ -24,4 +24,5 @@ app.use((req,res,next)=>{
     res.status(404).render('erro');
 });
 
-app.listen(port,()=>console.log("servidor rodando na porta",port));
+//app.listen(port,()=>console.log("servidor rodando na porta",port));
+app.listen(process.env.PORT||3000,()=>console.log("servidor rodando na porta",port));
