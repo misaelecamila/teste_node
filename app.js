@@ -25,4 +25,4 @@ app.use((req,res,next)=>{
 });
 
 //app.listen(port,()=>console.log("servidor rodando na porta",port));
-app.listen(process.env.PORT||3000,()=>console.log("servidor rodando na porta",port));
+app.listen(process.env.PORT||3000,()=>console.log("servidor rodando na porta"));
